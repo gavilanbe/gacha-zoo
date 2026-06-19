@@ -1,0 +1,11 @@
+name = "gacha"
+compatibility_date = "2026-06-01"
+pages_build_output_dir = "dist"
+
+[vars]
+FAMILY_CODE = "zoo-gavilan"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "gacha-db"
+database_id = "eb560bb3-8499-4427-9410-54355f2f16ef"

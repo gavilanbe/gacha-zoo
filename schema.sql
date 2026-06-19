@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS players(
+  id TEXT PRIMARY KEY, name TEXT UNIQUE NOT NULL, pin TEXT NOT NULL,
+  avatar TEXT, created INTEGER
+);
+CREATE TABLE IF NOT EXISTS offers(
+  id TEXT PRIMARY KEY, seller TEXT NOT NULL, kind TEXT NOT NULL,
+  animal TEXT NOT NULL, shiny INTEGER DEFAULT 0, price INTEGER, want TEXT,
+  status TEXT DEFAULT 'open', buyer TEXT, created INTEGER, closed INTEGER
+);
+CREATE TABLE IF NOT EXISTS deltas(
+  id INTEGER PRIMARY KEY AUTOINCREMENT, player TEXT NOT NULL,
+  payload TEXT NOT NULL, applied INTEGER DEFAULT 0, created INTEGER
+);
+CREATE TABLE IF NOT EXISTS scores(
+  player TEXT, game TEXT, score INTEGER, week TEXT,
+  PRIMARY KEY(player,game,week)
+);
+CREATE TABLE IF NOT EXISTS zoos(
+  player TEXT PRIMARY KEY, payload TEXT, updated INTEGER
+);

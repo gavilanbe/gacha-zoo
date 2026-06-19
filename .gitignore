@@ -1,0 +1,30 @@
+node_modules/
+dist/
+build/
+out/
+.next/
+.cache/
+.parcel-cache/
+.wrangler/
+target/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+*.log
+# build artifacts de audio (regenerables desde los .mid + soundfont vía `make music`)
+src-music/*_raw.wav
+src-music/*_trimmed.wav
+# secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+*.key
+id_rsa*
+*credential*
+*secret*
+service-account*.json
+*.p12
